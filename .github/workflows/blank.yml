@@ -3,17 +3,14 @@
 name: CI
 
 on:
-  merge_group:
-    types:
-      - checks_requested
   pull_request:
     branches:
-      - develop
+      - 'develop'
       - 'release/**'
-  # Allows you to run this workflow manually from the Actions tab
+  merge_group:
+    types: [checks_requested]
   workflow_dispatch:
-
-
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
